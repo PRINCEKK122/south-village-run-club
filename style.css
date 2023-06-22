@@ -2,6 +2,7 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -10,61 +11,214 @@ html {
 
 body {
     font-family: Montserrat, sans-serif;
+    background-color: #ffa07a;
 }
 
-
 /* Header styles */
-header {
+.menu-items {
     background-color: #018180;
     padding: 1rem;
 }
 
-header ul {
+.menu-items ul {
     list-style: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-header li:first-child {
+.menu-items li:first-child {
     margin-top: 1.8rem;
 }
 
-
-header li:not(li:last-child)  {
+.menu-items li:not(li:last-child)  {
     margin-bottom: 2rem;
 }
 
-header a {
+.menu-items a {
     text-decoration-color: #800080;
     color: #fea07b;
     font-size: 1.5rem;
 }
 
 @media only screen and (min-width: 650px) {
-    header {
+    .menu-items {
         padding: 0;
     }
 
-    header ul {
+    .menu-items ul {
         flex-direction: row;
         align-items: baseline;
     }
 
-
-    header li:not(li:last-child) {
-        margin: 2.2rem 7rem 1rem;
+    .menu-items li:not(li:last-child) {
+        margin: 2.2rem 7rem 0.5rem;
     }
 
-    header li:last-child {
+    .menu-items li:last-child {
         margin-left: 3rem;
     }
 
-    header a {
-        font-size: 1.7rem;
+    .menu-items a {
+        font-size: 1.6rem;
         text-decoration: none;
         font-weight: 400;
     }
 }
 
-/* Banner section */
+/* Intro section */
+.main-heading {
+    margin: 4rem 0 10rem;
+    background-color: #80513e;
+    font-size: 3.5rem;
+    color: #ff7f50;
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: 500;
+}
+
+@media only screen and (min-width: 650px) {
+    .main-heading {
+        margin: 17rem 0;
+    }
+}
+
+/* Events Section */
+#events {
+    color: #fff;
+}
+
+#events h2 {
+    padding: 0 2rem;
+    font-size: 2.5rem;
+    color: #fef202;
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
+
+#events p {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+}
+
+#events p + p {
+    margin-top: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+#events .images-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+
+#events img {
+    margin-bottom: 1.4rem;
+}
+
+#events img:last-child {
+    margin-bottom: 9rem;
+}
+
+@media only screen and (min-width: 900px) {
+    #events .images-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #events img:last-child {
+        margin-bottom: 1.4rem;
+    }
+
+    .images-container img {
+        width: 31%;
+    }
+}
+
+/* Results Section */
+#results {
+    background-color: #018180;
+    color: #fefe00;
+    padding: 4rem 1rem 1.2rem;
+}
+
+#results h3 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+#results p {
+    margin-top: 2.5rem;
+    font-size: 1.6rem;
+}
+
+@media only screen and (min-width: 850px) {
+    #results {
+        margin-top: 4rem;
+        padding: 4rem 2rem 18rem;
+    }
+
+    #results h3 {
+        font-size: 3.7rem;
+        font-weight: 600;
+    }
+
+    #results p {
+        margin-top: 2rem;
+        font-size: 1.8rem;
+    }
+}
+
+/* Restaurants Section */
+#restaurants {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#restaurants {
+    margin-bottom: 2rem;
+}
+
+#restaurants h4:first-of-type {
+    margin-bottom: 1.7rem;
+}
+
+#restaurants h4 {
+    color: #fefe00;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 4rem;
+}
+
+#restaurants .meeting-time {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#restaurants .images-container {
+    margin-top: 9rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#restaurants .images-container img {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#restaurants > img {
+    width: 50%;
+}
+
+@media only screen and (min-width: 900px) {
+    #restaurants .images-container {
+        margin-top: 6rem;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    #restaurants .images-container img {
+        width: 31%;
+    }
+}
